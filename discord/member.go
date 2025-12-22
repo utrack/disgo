@@ -26,6 +26,7 @@ type Member struct {
 	Pending                    bool                  `json:"pending"`
 	CommunicationDisabledUntil *time.Time            `json:"communication_disabled_until"`
 	AvatarDecorationData       *AvatarDecorationData `json:"avatar_decoration_data"`
+	Permissions                Permissions           `json:"permissions"`
 
 	// This field is not present everywhere in the API and often populated by disgo
 	GuildID snowflake.ID `json:"guild_id"`
