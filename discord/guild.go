@@ -262,7 +262,6 @@ type OAuth2Guild struct {
 	Icon                     *string        `json:"icon"`
 	Banner                   *string        `json:"banner"`
 	Owner                    bool           `json:"owner"`
-	RoleIDs                  []snowflake.ID `json:"roles,omitempty"`
 	Permissions              Permissions    `json:"permissions"`
 	Features                 []GuildFeature `json:"features"`
 	ApproximateMemberCount   int            `json:"approximate_member_count"`
