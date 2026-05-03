@@ -8,6 +8,7 @@ import (
 	"net/textproto"
 
 	"github.com/disgoorg/json"
+	"github.com/disgoorg/snowflake/v2"
 
 	"github.com/disgoorg/disgo/internal/flags"
 )
@@ -82,7 +83,7 @@ func parseAttachments(files []*File) []AttachmentCreate {
 			continue
 		}
 		attachments = append(attachments, AttachmentCreate{
-			ID:          i,
+			ID:          snowflake.ID(i),
 			Description: file.Description,
 		})
 	}
