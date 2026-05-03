@@ -48,8 +48,8 @@ type AttachmentKeep struct {
 func (AttachmentKeep) attachmentUpdate() {}
 
 type AttachmentCreate struct {
-	ID          int    `json:"id"`
-	Description string `json:"description"`
+	ID          snowflake.ID `json:"id"`
+	Description string       `json:"description"`
 }
 
 func (AttachmentCreate) attachmentUpdate() {}
